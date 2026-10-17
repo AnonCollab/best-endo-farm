@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Best Endo Farm — Warframe (checked Oct 2026)</title>
+<style>
+  :root{--bg:#17181c;--panel:#1f2126;--panel2:#26282f;--line:#34363f;--text:#e8e6e1;--muted:#a9a49b;--gold:#d4af37;--green:#7fc97f;--red:#e08a8a;--amber:#e0b36a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+  main{max-width:960px;margin:0 auto;padding:24px 18px 64px}
+  h1{font-size:30px;margin:8px 0 4px}
+  h2{font-size:21px;margin:34px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+  h3{font-size:16px;margin:18px 0 4px}
+  .sub{color:var(--muted);margin:0 0 14px}
+  .verdict{background:var(--panel);border:1px solid var(--gold);border-radius:10px;padding:14px 16px;margin:16px 0}
+  .verdict strong{color:var(--gold)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:14px 0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .card .k{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .card .v{font-size:17px;font-weight:700;margin:3px 0}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+  th{background:var(--panel2)}
+  .ok{color:var(--green);font-weight:600}
+  .buff{color:var(--gold);font-weight:600}
+  .tag{display:inline-block;font-size:11px;border:1px solid var(--line);border-radius:20px;padding:1px 8px;color:var(--muted);margin-left:6px}
+  .note{color:var(--muted);font-size:13px}
+  .warn{background:#2a2320;border:1px solid #574433;border-radius:10px;padding:10px 14px;margin:12px 0}
+  section.farm{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0}
+  ul{margin:6px 0 6px 18px;padding:0}
+  li{margin:3px 0}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+  .chip{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:20px;padding:5px 14px;cursor:pointer;font-size:13px}
+  .chip[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+  .calc{display:flex;gap:10px;flex-wrap:wrap;align-items:end;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .calc label{font-size:13px;color:var(--muted);display:block}
+  .calc input,.calc select{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font-size:15px;margin-top:3px}
+  .calc .out{font-size:17px;font-weight:700}
+  a{color:var(--gold)}
+  footer{color:var(--muted);font-size:13px;margin-top:36px;border-top:1px solid var(--line);padding-top:12px}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<main>
+  <h1>Best Endo Farm — Warframe</h1>
+  <p class="sub">Every farm below was cross-checked against Digital Extremes' official patch notes through <strong>17 October 2026</strong>. Rates are labelled: <em>official</em> = DE's published drop tables; <em>claimed</em> = community guides/videos; <em>worked example</em> = the wiki's calculated figure. No source publishes a controlled Endo/hour measurement — treat hourly numbers as claims with a spread, not guarantees.</p>
+
+  <div class="verdict">
+    <strong>The verdict:</strong> nothing has dethroned the old meta, and nothing important was nerfed. Every classic farm still works. The one big change went the other way — <strong>Arbitrations were BUFFED in Update 41.1 (11 Feb 2026)</strong>. No new hourly Endo king arrived in 2025–2026; the new additions are one bounty set (Deepmine, Oct 2025) and weekly drip sources.
+  </div>
+
+  <div class="cards">
+    <div class="card"><div class="k">Best premade squad</div><div class="v">Steel Path Rathuum Arena</div><div>~2,000–4,000 Endo/run claimed · no patch touched it 2024–2026</div></div>
+    <div class="card"><div class="k">Best solo / all-round</div><div class="v">Arbitrations (Defense)</div><div>11,796/hr worked example · buffed Feb 2026</div></div>
+    <div class="card"><div class="k">Best short sessions</div><div class="v">Höllvania T5 · Deepmine SP bounties</div><div>Up to 4,200 Endo per roll, official tables</div></div>
+  </div>
+
+  <h2>Ranked shortlist</h2>
+  <div class="chips" role="group" aria-label="Filter farms">
+    <button class="chip" data-f="all" aria-pressed="true">All farms</button>
+    <button class="chip" data-f="solo" aria-pressed="false">Solo-viable</button>
+    <button class="chip" data-f="premade" aria-pressed="false">Premade squad</button>
+    <button class="chip" data-f="weekly" aria-pressed="false">Weekly / passive</button>
+  </div>
+  <table id="rankTable">
+    <tr><th>Farm</th><th>Rate</th><th>Requirements</th><th>Verdict</th></tr>
+    <tr data-tags="premade"><td><strong>Steel Path Rathuum Arena</strong> — Yam (easier) or Vodyanoi, Sedna</td><td>~2,000–4,000/run (claimed, 2026); ~10,000–20,000/hr (claimed, older guides)</td><td>Steel Path; premade Nidus + Khora (Pilfering Strangledome) + 2× Nekros; one Mod Drop Chance Booster in squad; Judgement Points</td><td class="ok">Still works — no patch found touching it 2024–2026</td></tr>
+    <tr data-tags="solo"><td><strong>Arbitrations</strong> — Defense preferred</td><td>11,796/hr (wiki worked example, incl. filled sculptures); ~10,000–15,000/hr claimed</td><td>Pluto→Eris Junction task unlock (since U39); no Steel Path; solo-viable</td><td class="buff">Still works — BUFFED by Update 41.1 (Feb 2026)</td></tr>
+    <tr data-tags="solo"><td><strong>High-tier bounties</strong> — Höllvania T5/SP, Nightcap Deepmine SP</td><td>Per roll, official: Höllvania 4,200 @15.69% / 3,300 @13.73%; Deepmine SP 3,500 @30% / 4,000 @5%</td><td>The Hex quest (Höllvania); The New War (Deepmine); boosters don't affect bounty tables</td><td class="ok">Still works — tables unchanged; Deepmine new Oct 2025</td></tr>
+    <tr data-tags="solo"><td><strong>Railjack</strong> — Veil Proxima Skirmish / Void Storms</td><td>~6,000–10,000/hr claimed (older guides); 1,200-Endo caches; wreckage scrap pays Endo</td><td>A built Railjack</td><td class="ok">Still works — no 2025–2026 change</td></tr>
+    <tr data-tags="weekly"><td><strong>Weekly / passive stack</strong> — Maroo hunt, Sortie/Archon Hunt, Palladino, Teshin rotation, Descendia, dissolving duplicate mods</td><td>Fixed amounts — see weekly section below</td><td>Various quest unlocks; Steel Path for Teshin</td><td class="ok">Still works; Palladino &amp; Descendia are post-2025 additions</td></tr>
+  </table>
+
+  <h2>Grind-time calculator</h2>
+  <div class="calc">
+    <div><label for="target">Endo you need</label><input id="target" type="number" value="50000" min="0" step="1000"></div>
+    <div><label for="farmSel">Farm</label>
+      <select id="farmSel">
+        <option value="11796">Arbitrations — 11,796/hr (worked example)</option>
+        <option value="15000">Arena premade — 15,000/hr (mid of claimed 10–20k)</option>
+        <option value="8000">Railjack — 8,000/hr (mid of claimed 6–10k)</option>
+      </select></div>
+    <div class="out" id="calcOut"></div>
+  </div>
+  <p class="note">Estimates only — every rate above is a community claim or worked example, and real rates swing with loadout, booster uptime and squad.</p>
+
+  <h2>The farms in detail</h2>
+
+  <section class="farm">
+    <h3>1. Rathuum Arena — Sedna (Yam / Vodyanoi) <span class="tag">best premade</span></h3>
+    <p><strong>Method.</strong> Executioners drop Endo directly (15/50/80 Endo from their mod drop table) plus mods you dissolve afterwards; the mission reward table also includes Endo ×250. Nidus (Larva) pulls Executioners into one spot, Khora's Pilfering Strangledome holds and loots them, two Nekros Desecrate the corpses. Kills must be Slash-heavy (weapon with &gt;50% of its physical damage as Slash) so bodies dismember into extra Desecrate-able parts. Per the community Endo Farming Guide, Vodyanoi gives <strong>no more Endo than Yam</strong> — it's just harder (SP Vodyanoi is level 185). Yam is the pick for newer farmers. Entry: Yam 10, Vodyanoi 15 Judgement Points.</p>
+    <div class="warn"><strong>Booster myth-bust:</strong> Endo drops from enemies count as <strong>mod drops</strong>. The <strong>Mod Drop Chance Booster</strong> is the big multiplier and stacks with Steel Path's built-in +100% mod drop chance; only one squad member needs it. The <strong>Resource Drop Chance Booster does NOT apply</strong> — any guide crediting it for Arena is wrong.</div>
+    <p><strong>Rates (all claimed).</strong> Optimised premade: "possible to get 4,000 Endo in one mission" (Endo Discord guide); 2,000–4,000 per run (2026 farms guide); ~4,000 in a ~1-minute run at peak with boosters (2026 video). Solo Khora: ~1,000 per ~2-minute run (2026 video). Hourly claims for a good squad: ~10,000–20,000, with short-run peaks far above that once loading and Judgement-Point upkeep are ignored.</p>
+    <p><strong>Verdict: still works — not patched.</strong> No 2024–2026 patch touched Rathuum spawns, Executioner drop tables or Endo drops, and 2026 guides still rank it #1. One caveat: guides claiming Desecrate and Pilfering Strangledome "double-dip" the same corpse are outdated — DE ended that in Update 25.0 (May 2019); a dead target yields one successful loot roll.</p>
+  </section>
+
+  <section class="farm">
+    <h3>2. Arbitrations <span class="tag">best solo</span></h3>
+    <p><strong>Method.</strong> Endless elite missions on an AABBC… rotation: <strong>Rotation A = 900 Endo, B = 1,200, C = 1,500</strong>, plus Ayatan sculptures as rewards and Vitus Essence from Arbitration Shield Drones. Defense is the popular pick because rotations now complete every <strong>3 waves</strong>, a reward roughly every ~3 minutes with a fast squad or a solo AoE frame (e.g. Mesa).</p>
+    <p><strong>Rates.</strong> 11,796 Endo/hour (wiki worked example, including filled Ayatan sculptures, assuming one reward per 5 minutes); ~10,000–15,000/hr claimed by guides. A creator re-tested the farm right after the Feb 2026 buff and confirmed the improved Rotation C rates.</p>
+    <p><strong>Vitus correction.</strong> Vitus Essence is <strong>not</strong> directly convertible to Endo — there is no "buy Endo with Vitus" item. The link is indirect: the Honors store sells Ayatan sculptures and the reusable Ayatan Amber Star blueprint, and filled sculptures trade to Maroo for Endo. Resource Boosters do double Vitus pickups; loot abilities do <strong>not</strong> affect the drones.</p>
+    <p><strong>Requirements.</strong> No Steel Path. Since <strong>Update 39 (25 Jun 2025)</strong> Arbitrations unlock with a task in the Pluto → Eris Junction — any guide saying "complete every Star Chart node" is outdated. Solo-viable, no boosters required.</p>
+    <p><strong>Verdict: still works — and BUFFED.</strong> Update 41.1 (11 Feb 2026): Rotation C Endo ×1,500 went 33% → 35% and 3× Vitus Essence 7% → 10%. Update 38.5 (19 Mar 2025) cut Defense rotations from 5 waves to 3. The only historical nerf is from 2019 and is already baked into every modern guide.</p>
+  </section>
+
+  <section class="farm">
+    <h3>3. High-level bounties <span class="tag">best short sessions</span></h3>
+    <p>All figures are <strong>official</strong> (DE's published drop tables, Oct 2026), per reward roll. Boosters do not affect bounty tables.</p>
+    <table>
+      <tr><th>Zone</th><th>Top Endo rewards</th></tr>
+      <tr><td><strong>Höllvania</strong> (1999; The Hex quest) — highest bounty Endo in the game</td><td>Tier 5: <strong>4,200 @ 15.69%</strong> / 3,300 @ 13.73% · Steel Path: 3,300 @ 14% / 4,200 @ 14%. Techrot also drop Potency mods to dissolve.</td></tr>
+      <tr><td><strong>Sanctum Anatomica</strong> (Deimos)</td><td>T5: 3,000 @ 14.71% / 4,000 @ 12.61% (ladder from 500/750 at T1)</td></tr>
+      <tr><td><strong>Zariman</strong></td><td>T4/T5: 3,000 @ 11.36% / 4,000 @ 9.74%</td></tr>
+      <tr><td><strong>Deepmine / Nightcap</strong> (Fortuna depths) — <em>new, Update 40, 15 Oct 2025</em>; The New War required</td><td>Steel Path Rotation B: <strong>3,500 @ 30.00%</strong> · Rotation C: 4,000 @ 5.00%</td></tr>
+      <tr><td><strong>Cambion Drift</strong> T5 stage-1 loop</td><td>1,000 @ 45.45% on stage 1 (restart after stage 1; ~10k/hr solo claimed by an older guide)</td></tr>
+      <tr><td><strong>Brutus, Uranus</strong> (Ascension)</td><td>3,000 @ 14% mission reward, plus mods to dissolve</td></tr>
+    </table>
+    <p><strong>Verdict: still work — tables unchanged in 2025–2026</strong>, except additions (Deepmine). Bounties lose to Arena/Arbitrations on sustained Endo/hour but win on session length, variety and side rewards.</p>
+  </section>
+
+  <section class="farm">
+    <h3>4. Railjack, Ayatan sculptures, dissolving mods <span class="tag">passive</span></h3>
+    <ul>
+      <li><strong>Railjack:</strong> Grineer Skirmish in Veil Proxima — 1,200-Endo caches and scrapping salvaged wreckage pays Endo directly (since Update 29.10 replaced Dirac 1:1 with Endo in 2021). ~6,000–10,000/hr claimed. No 2025–2026 change. Mid-tier rate, high side value (credits, relics via Void Storms, mods to dissolve).</li>
+      <li><strong>Ayatan sculptures (filled values, wiki):</strong> Anasa 3,450 · Kitha 3,000 · Orta 2,700 · Zambuka/Hemakara 2,600 · Vaya 1,800 · Piv 1,725 · Valana 1,575 · Sah 1,500 · Ayr 1,425. Loose stars: Cyan 50, Amber 100. No patch has altered these values.</li>
+      <li><strong>Maroo's weekly Ayatan Treasure Hunt</strong> (Stolen Dreams; resets Monday 00:00 UTC): one guaranteed sculpture per week. Small but free.</li>
+      <li><strong>Sorties / Archon Hunts</strong> feed the pipeline: Anasa sculpture @ 28.00% and 4,000 Endo @ 12.00% in the Sortie table — and Sorties are a source of the 3-day Mod Drop Chance Booster (3.27%) that powers the Arena farm.</li>
+      <li><strong>Dissolving duplicate mods:</strong> Common 5 · Uncommon 10 · Rare 15 · Primed 20 · Requiem 1,000 (500 if defiled) · Rivens 115 + 200 × rerolls. The universal passive source and the tail-end of every drop farm. Dissolve values unchanged.</li>
+    </ul>
+  </section>
+
+  <section class="farm">
+    <h3>5. The weekly stack (2025–2026 additions) <span class="tag">weekly</span></h3>
+    <ul>
+      <li><strong>Palladino (Iron Wake)</strong> — added Update 42 (25 Mar 2026): a <strong>6,000 Endo</strong> purchase, weekly limit 1, paid in Riven Slivers. <span id="palladinoPrice">Price: <strong>10 Riven Slivers</strong> (wiki, Palladino page — Wares; verified 17 Oct 2026).</span></li>
+      <li><strong>Teshin Steel Path Honors</strong> — <strong>30,000 Endo</strong> is one of 8 weekly rotating offers, buyable once in its rotation week only. <span id="teshinPrice">Price: <strong>150 Steel Essence</strong> (wiki, Steel Essence page — rotating offers grid; all 8 offers total 730 Steel Essence, which cross-checks; verified 17 Oct 2026).</span></li>
+      <li><strong>Descendia</strong> (Update 41, Dec 2025) — weekly tower; Normal-path common rewards randomly include 2,500 Endo (one weekly run reported ~10,000 total). Steel Path commons are poor for direct Endo. A weekly bonus, not a farm.</li>
+      <li><strong>The Perita Rebellion</strong> (U41) — Rotation A has 2,500 Endo at only 5%. Not a farm.</li>
+      <li><strong>Epoch Operation: Taubound</strong> (event, 15 Oct – 17 Nov 2026) — its shop's only Endo item is a trivial 100 Endo (limit 300). Not an Endo farm despite being the newest content.</li>
+    </ul>
+  </section>
+
+  <h2>Patch-note cross-check</h2>
+  <table>
+    <tr><th>Farm</th><th>Official changes found (through 17 Oct 2026)</th><th>Verdict</th></tr>
+    <tr><td>Rathuum Arena</td><td><strong>None found 2024–2026</strong> — no change to spawns, Executioner drop tables, or Endo-as-mod-drop behaviour. Loot-stacking rule is Update 25.0 (2019).</td><td class="ok">Still works</td></tr>
+    <tr><td>Arbitrations</td><td><strong>U41.1 (2026-02-11)</strong>: Endo ×1,500 33%→35%, Vitus ×3 7%→10%. <strong>U39 (2025-06-25)</strong>: unlock moved to Pluto→Eris Junction. <strong>U38.6 (2025)</strong>: rotation rewards added to Honors store. <strong>U38.5 (2025-03-19)</strong>: Defense 5→3 waves.</td><td class="buff">Buffed</td></tr>
+    <tr><td>Bounties (Sanctum / Zariman / Höllvania)</td><td><strong>None found</strong> — current official tables match what guides quote.</td><td class="ok">Still works</td></tr>
+    <tr><td>Deepmine bounties</td><td><strong>Added U40 (2025-10-15)</strong>; Hotfix 40.0.2 expanded the tables (an addition, not a nerf).</td><td class="ok">Still works (new)</td></tr>
+    <tr><td>Railjack scrapping</td><td><strong>None found 2025–2026.</strong> System change is old: Dirac→Endo, U29.10 (2021).</td><td class="ok">Still works</td></tr>
+    <tr><td>Ayatan values / Maroo</td><td><strong>None found.</strong></td><td class="ok">Unchanged</td></tr>
+    <tr><td>Mod dissolve values</td><td><strong>None found.</strong></td><td class="ok">Unchanged</td></tr>
+    <tr><td>Loot abilities (Desecrate, Pilfering Strangledome 65%, Ore Gaze)</td><td><strong>None found 2025–2026</strong>; governing rule remains Update 25.0 (2019).</td><td class="ok">Unchanged</td></tr>
+    <tr><td>Updates 43 (Jun 2026), 43.5 (Aug 2026), 44 (Sep 2026)</td><td>Searched — no changes to any Endo source found.</td><td class="ok">No effect</td></tr>
+  </table>
+
+  <h2>Outdated guidance to ignore</h2>
+  <ul>
+    <li>Pre-2019 guides implying Desecrate + Pilfering Strangledome double-dip one corpse (fixed in U25.0).</li>
+    <li>Any guide listing the <strong>Resource Drop Chance Booster</strong> as helping Arena Endo — it's mod-drop chance only.</li>
+    <li>Guides saying Arbitrations require a fully completed Star Chart (changed U39, Jun 2025), or quoting pre-U41.1 Rotation C rates (33% / 7%).</li>
+    <li>TheGamer's "1,000 Endo per minute" Arena figure (~2022) — internally inconsistent marketing copy.</li>
+  </ul>
+
+  <h2>Open questions</h2>
+  <ul>
+    <li id="openPalladino"><strong>Resolved 17 Oct 2026:</strong> Palladino's 6,000 Endo offer costs <strong>10 Riven Slivers</strong> — read directly off the wiki's Palladino page (Wares), after the original research pass failed to capture it.</li>
+    <li id="openTeshin"><strong>Resolved 17 Oct 2026:</strong> Teshin's 30,000 Endo offer costs <strong>150 Steel Essence</strong> — the wiki's Steel Essence page shows the price badge on the 30,000 Endo card itself, and the page's note that all 8 rotating offers total 730 Steel Essence cross-checks the grid.</li>
+    <li>No source publishes a controlled Endo/hour measurement — all hourly figures are claims or worked examples.</li>
+  </ul>
+
+  <footer>
+    <p><strong>Key sources:</strong>
+    <a href="https://www.warframe.com/en/patch-notes/switch/41-1-0">Update 41.1 patch notes</a> ·
+    <a href="https://forums.warframe.com/topic/1458589-update-39-isleweaver/">Update 39 notes</a> ·
+    <a href="https://www.warframe.com/en/patch-notes/pc/40-0-2">Hotfix 40.0.2</a> ·
+    <a href="https://www.warframe.com/en/patch-notes/xbox/42-0-0">Update 42 notes</a> ·
+    <a href="https://www.shacknews.com/article/142646/the-best-endo-farm-warframe">Shacknews best Endo farms (Jan 2025)</a> ·
+    <a href="https://ggwtb.com/blog/warframe-best-farms-2026-the-most-efficient-platinum--endo--relic--and-arcane-farms">GGWTB Best Farms 2026</a> ·
+    <a href="https://arbi.guide/">arbi.guide</a> ·
+    official DE drop tables and wiki.warframe.com (Rathuum, Defence, Ayatan Treasures, Sortie, Steel Essence pages).
+    </p>
+    <p>Research checked 17 October 2026. Game content © Digital Extremes. Unofficial fan guide, not affiliated with DE.</p>
+  </footer>
+</main>
+<script>
+  // Ranked-table filters
+  document.querySelectorAll('.chip').forEach(function(chip){
+    chip.addEventListener('click', function(){
+      document.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed','false'); });
+      chip.setAttribute('aria-pressed','true');
+      var f = chip.getAttribute('data-f');
+      document.querySelectorAll('#rankTable tr[data-tags]').forEach(function(row){
+        row.classList.toggle('hidden', f !== 'all' && row.getAttribute('data-tags').indexOf(f) === -1);
+      });
+    });
+  });
+  // Grind-time calculator
+  var target = document.getElementById('target'), sel = document.getElementById('farmSel'), out = document.getElementById('calcOut');
+  function calc(){
+    var need = parseFloat(target.value) || 0, rate = parseFloat(sel.value) || 1;
+    var hrs = need / rate;
+    out.textContent = need > 0 ? ('≈ ' + (hrs < 10 ? hrs.toFixed(1) : Math.round(hrs)) + ' hours of farming') : '';
+  }
+  target.addEventListener('input', calc); sel.addEventListener('change', calc); calc();
+</script>
+</body>
+</html>
